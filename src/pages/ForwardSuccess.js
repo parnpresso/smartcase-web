@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const RejectSuccessPage = () => {
+const ForwardSuccessPage = () => {
   const navigate = useNavigate();
 
   return (
@@ -14,7 +14,7 @@ const RejectSuccessPage = () => {
         <div className="w-full bg-white rounded-xl p-8 w-80">
           <div className="mt-8 flex justify-center flex-col items-center">
             <div className="bg-gray-100 text-2xl w-16 h-16 rounded-full flex justify-center items-center mb-4">✅</div>
-            <h2 className="mb-8 font-semibold text-lg">The issue has been rejected!</h2>
+            <h2 className="mb-8 font-semibold text-lg">The issue has been forward!</h2>
             <button className="bg-cyan-300 px-4 py-2 rounded-lg font-semibold" onClick={() => navigate('/issues')}>Back to home</button>
           </div>
         </div>
@@ -22,4 +22,4 @@ const RejectSuccessPage = () => {
     </div>
   );
 }
-export default RejectSuccessPage;
+export default ForwardSuccessPage;
