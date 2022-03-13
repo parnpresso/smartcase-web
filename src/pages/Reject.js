@@ -6,7 +6,7 @@ const RejectPage = () => {
   return (
     <div className="min-h-screen h-full bg-gray-100">
       <div className="bg-white flex justify-between px-20 p-6">
-        <h1 className="font-semibold text-xl">SmartCase 🚀</h1>
+        <h1 className="font-semibold text-xl cursor-pointer" onClick={() => navigate('/')}>SmartCase 🚀</h1>
         <h1 className="font-semibold">Welcome back, Parn!</h1>
       </div>
 
@@ -43,7 +43,7 @@ const RejectPage = () => {
 
             <div className="mt-8 flex justify-center">
               <button className="bg-gray-200 px-4 py-2 rounded-lg font-semibold text-gray-600 mr-2" onClick={() => navigate('/')}>Cancel</button>
-              <button className="bg-cyan-300 px-4 py-2 rounded-lg font-semibold" onClick={() => navigate('/reject-success')}>Reject</button>
+              <button className="bg-cyan-300 px-4 py-2 rounded-lg font-semibold" onClick={() => navigate('/issues/reject/success')}>Reject</button>
             </div>
           </div>
         </div>

@@ -7,12 +7,15 @@ import {
 } from "react-router-dom";
 import RejectPage from './pages/Reject';
 import IssuePage from './pages/Issue';
+import RejectSuccessPage from "./pages/RejectSuccess";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/issues" element={<IssuePage />} />
         <Route path="/issues/reject" element={<RejectPage />} />
+        <Route path="/issues/reject/success" element={<RejectSuccessPage />} />
         <Route path="/" element={<IssuePage />} />
       </Routes>
     </BrowserRouter>
