@@ -39,7 +39,7 @@ const IssuePage= () => {
               key={`card-${index}`}
               onClick={() => onClickIssue(issue)}
             >
-              <div className="bg-amber-200 p-4 rounded-lg w-24 flex flex-col items-center">
+              <div className={`${issue.priority === 'Low' ? 'bg-amber-200' : 'bg-red-200'} p-4 rounded-lg w-24 flex flex-col items-center`}>
                 <div className="text-2xl">🚨</div>
                 <div className="text-gray-600 font-semibold text-sm">{issue.priority || 'Low'}</div>
               </div>
@@ -82,7 +82,11 @@ const IssuePage= () => {
               <h1 className="font-semibold text-lg mb-4">Detail</h1>
               <div className="w-full bg-white rounded-xl p-8">
                 <div className="flex">
-                  <div className="bg-gray-100 p-4 rounded-lg w-24 flex flex-col items-center">
+                  {/* <div className="bg-gray-100 p-4 rounded-lg w-24 flex flex-col items-center">
+                    <div className="text-2xl">🚨</div>
+                    <div className={`text-gray-600 font-semibold text-sm`}>{selectedIssue.priority || 'Low'}</div>
+                  </div> */}
+                   <div className={`${selectedIssue.priority === 'Low' ? 'bg-amber-200' : 'bg-red-200'} p-4 rounded-lg w-24 flex flex-col items-center`}>
                     <div className="text-2xl">🚨</div>
                     <div className="text-gray-600 font-semibold text-sm">{selectedIssue.priority || 'Low'}</div>
                   </div>
@@ -99,14 +103,19 @@ const IssuePage= () => {
 
                 <div className="mb-20">
                   <div className='flex flex-row justify-between mb-2'>
-                    <h3 className="font-semibold text-gray-600 mb-2">Forward to:</h3>
-                    <div className="bg-green-300 p-1 px-2 text-gray-600 text-sm rounded-lg">Auto-matched</div>
+                    <h3 className="font-semibold text-gray-600 mb-2">Forward to department:</h3>
+                    <div className="bg-green-300 p-1 px-2 text-gray-600 text-sm rounded-lg">{selectedIssue.keyword}</div>
                   </div>
 
                   <select class="w-full border bg-white rounded px-3 py-2 outline-none">
-                      <option class="py-1">Hosuing (hoing@gov.uk)</option>
-                      <option class="py-1"></option>
-                      <option class="py-1"></option>
+                    <option class="py-1" selected={selectedIssue.keyword === 'General' ? true : false}>-------------</option>
+                    <option class="py-1" selected={selectedIssue.keyword === 'Business' ? true : false}>Business (mp.business@gov.uk)</option>
+                    <option class="py-1" selected={selectedIssue.keyword === 'Media' ? true : false}>Media (mp.media@gov.uk)</option>
+                    <option class="py-1" selected={selectedIssue.keyword === 'Policy' ? true : false}>Policy (mp.policy@gov.uk)</option>
+                    <option class="py-1" selected={selectedIssue.keyword === 'Tax issue' ? true : false}>Tax issue (mp.tax-issue@gov.uk)</option>
+                    <option class="py-1" selected={selectedIssue.keyword === 'Transport' ? true : false}>Transport (mp.transport@gov.uk)</option>
+                    <option class="py-1" selected={selectedIssue.keyword === 'Social care' ? true : false}>Social care (mp.social-care@gov.uk)</option>
+                    <option class="py-1" selected={selectedIssue.keyword === 'Council work' ? true : false}>Council work (mp.council-work@gov.uk)</option>
                   </select>
                 </div>
 

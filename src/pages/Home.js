@@ -5,11 +5,10 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import { useNavigate } from 'react-router-dom';
 
 
 
-  
+
 const StyledPaper = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -20,8 +19,6 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 
 
 const Home = () => {
-    const navigate = useNavigate();
-
     return (
       <div className="min-h-screen h-full bg-gray-100">
         <div className="bg-white flex justify-between px-20 p-6">
@@ -33,7 +30,7 @@ const Home = () => {
         <Box sx={{ flexGrow: -5, overflow: 'hidden'}}></Box>
         </Typography>
         </Box>
-        
+
         <Box sx={{ flexGrow: -5, overflow: 'hidden', px: 3 }}>
       <StyledPaper
         sx={{
@@ -140,4 +137,3 @@ const Home = () => {
     );
   }
   export default Home;
-  
