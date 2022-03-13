@@ -86,10 +86,6 @@ const IssuePage= () => {
                     <div className="text-2xl">🚨</div>
                     <div className={`text-gray-600 font-semibold text-sm`}>{selectedIssue.priority || 'Low'}</div>
                   </div> */}
-                   <div className={`${selectedIssue.priority === 'Low' ? 'bg-amber-200' : 'bg-red-200'} p-4 rounded-lg w-24 flex flex-col items-center`}>
-                    <div className="text-2xl">🚨</div>
-                    <div className="text-gray-600 font-semibold text-sm">{selectedIssue.priority || 'Low'}</div>
-                  </div>
                   <div className="ml-4 flex flex-col pt-2">
                     <h2 className="font-semibold text-2xl">{selectedIssue.title}</h2>
                     <p className="text-gray-600 font-semibold text-sm">From: {selectedIssue.email}</p>
