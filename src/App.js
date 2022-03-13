@@ -16,7 +16,6 @@ function App() {
         <Route path="/issues/reject" element={<RejectPage />} />
         <Route path="/issues/reject/success" element={<RejectSuccessPage />} />
         <Route path="/issues/forward/success" element={<RejectSuccessPage />} />
-        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
