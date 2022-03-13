@@ -50,13 +50,37 @@ const RejectPage = () => {
 
         <div className="w-3/6 pl-8">
           <h1 className="font-semibold text-lg mb-4">Message templates</h1>
-          <div className="w-full bg-white rounded-xl p-4 flex justify-between items-center">
+          <div className="w-full bg-white rounded-xl p-4 flex justify-between items-center mb-2">
             <div className="ml-4 flex flex-col">
               <div className="flex">
                 <h2 className="font-semibold text-lg mr-2">We cannot help you</h2>
                 <div className="bg-green-300 p-1 px-2 text-gray-600 text-sm rounded-lg">Recommended</div>
               </div>
               <p className="text-gray-600 text-sm">52 replies</p>
+            </div>
+            <div>
+              <button className="bg-cyan-300 px-4 py-2 rounded-lg font-semibold">Use this template</button>
+            </div>
+          </div>
+
+          <div className="w-full bg-white rounded-xl p-4 flex justify-between items-center mb-2">
+            <div className="ml-4 flex flex-col">
+              <div className="flex">
+                <h2 className="font-semibold text-lg mr-2">Our partner can help you</h2>
+              </div>
+              <p className="text-gray-600 text-sm">3 replies</p>
+            </div>
+            <div>
+              <button className="bg-cyan-300 px-4 py-2 rounded-lg font-semibold">Use this template</button>
+            </div>
+          </div>
+
+          <div className="w-full bg-white rounded-xl p-4 flex justify-between items-center">
+            <div className="ml-4 flex flex-col">
+              <div className="flex">
+                <h2 className="font-semibold text-lg mr-2">....</h2>
+              </div>
+              <p className="text-gray-600 text-sm">1 replies</p>
             </div>
             <div>
               <button className="bg-cyan-300 px-4 py-2 rounded-lg font-semibold">Use this template</button>
