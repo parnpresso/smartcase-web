@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import RejectPage from './pages/Reject';
 import IssuePage from './pages/Issue';
-import Home from './pages/Home';
 import RejectSuccessPage from "./pages/RejectSuccess";
 
 function App() {
